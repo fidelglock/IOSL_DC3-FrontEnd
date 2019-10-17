@@ -70,7 +70,7 @@
     "sweetalert-react": "^0.4.10",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
-    "webpack-dev-server": "3.0.0",
+    "webpack-dev-server": "3.1.11",
     "webpack-manifest-plugin": "1.2.1",
     "whatwg-fetch": "2.0.3"
   },
