@@ -1,0 +1,34 @@
+\chapter{Evaluation}
+\label{cha:evaluation}
+
+DC3 web application visualizes logistic processes from blockchain data and IOT sensor monitors. DC3 system puts customers in the loop with regard to package status merging and displaying relevant information from blockchain, the local database and the IOT sensors. From registering the package to delivering the package at the final destination, customer does not have to look for different vendors and tracking options. Fully informed package condition and the exact custody holder of package can be managed by the customer using the DC3 system.
+\section{System Flow Evaluation}
+For the evaluation of the developed system we created separate emails (Gmail accounts) for each user. Created two for company users, two for customers and four for postman. Postman were divided among two companies for handover and delivery processes to be shown. We started from adding users to the system and registering the package into the system to delivering the registered package through the companies postman to the destination.
+
+As there is no specific procedure on system to add user as company directly, first companies were added as customers and later changed their roles to company representatives where in reality the admin role creates the master company account and later additions can be made. And similarly a postman and a customer were added in system using Google authentication. Also postmen are initially registered to the system as customers and can later be upgraded to a postman by company users. And company can upgrade a user to a company user for its company.
+
+For the flow of delivery of package and how that information will be displayed on system we started with the registration of a package from the customer filling in all the details required. Customer then has to assign a company from the listed companies as their initial package handler. Also the receiver has to be registered in the DC3 system for the sender to send the package to the receiver. Customer can also choose available sensors from the system that should be attached to the package to check the condition and safety of package (which is optional). For now DC3 has two sensor types to be selected among one being the heat Sensor and the other is the shock sensor. User can select either of these two or can select both sensors or even neither of the sensors.Customer has a time limit until the package is sent into the status of in-transit to actually de-register the package from the system.
+
+Customer registered packages are displayed to the company account, where company can further assign the package to a postman belonging to the company for pickup and handover processes. For the package to assigned to a postman by the company, the package should have a registered status. The Company can then assign the package to postman by entering the registered email address of the postman.
+
+Postman sees the list of available jobs under the account and starts to deliver packages to the receivers, hands over the package to another postman of same company or hands over the package to another postman of a different company based on the destination address. For a delivery to be complete, the postman has to deliver the package to the destination address and mark the package as delivered. And for any handovers the postman will have to enter the email address of the other designated postman and update the package details.
+In between the delivery process incident creation is a function where users( company, postman and customers) can create an incident with respect to a specific package issue(s). Customer can report to the company if the package has arrived distorted, broken or in unacceptable condition. Postman can generate an incident if the handed over package is broken, torn, distorted or in unacceptable condition and company can generate an incident if they notice unusual condition on packages under their custody. The raised incident are displayed to postman, company and customer linked with the package.
+
+Resolve incident provides mechanism to solve issues and resolve created incidents in the individual user level. Company, postman and even user can resolve created incidents if they are satisfied with the action taken by the concerned parties to mitigate the raised issues.
+
+Each package detail displays the detailed information of the package with its time line. Time line helps to visualize the package status and also helps to determine ownership of the package at a given instance.
+
+\section{System Limitation and Recommendation}
+DC3  web application has covered all stakeholders ( customer, Postal Companies and Postman) within the system and the basic flow of the system has included all these stakeholders inside the package delivery loop. But there are some limitations in system which are as follows
+
+\begin{itemize}
+\item By using Google authentication, system cant directly detect the user type. Like for instance if a company representative wants to register in the system first they have to register as a customer and then have to manually upgrade themselves as the company user by getting in touch with the master company user.This condition also applies for postmen but it is a valid procedure.
+\end{itemize}
+\begin{itemize}
+\item DC3 currently does not have a mechanism to fetch data directly from blockchain as the set up is not complete with respect to the blockchain ledger. Which means IOT triggered incidents are not working in the system and only user created incidents are stored in the system database for now and are displayed in the Incident management system.
+\item DC3 web application is only tested in the local environment, on local PCs and laptops. No real time testing and stress testing is done for real business scenarios.
+\end{itemize}
+\begin{itemize}
+\item Coding standards can be improved a bit generally in the front end and as all of our team members were beginners when it came to react JS development. Many of the functionality and layouts were reused/modified from the provided template hence structuring of the code is not exactly up to the industry standards. Code cleaning was done extensively but there still exists a few redundant pieces of code. 
+\end{itemize}
+Even with these limitations DC3 provides most of the functionality that were proposed in the requirement phase.This system can be used as a  basic product which can be improved to make it an industry standard end-to-end web application. As part of the future work the Blockchain integration can be looked upon as the major addition to the system.

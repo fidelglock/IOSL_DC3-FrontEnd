@@ -1,0 +1,17 @@
+.form {
+    /* margin: 0 auto; */
+    padding: 50px 30px 0;
+    color: #00ff00;
+  
+    @media (min-width: 800px) {
+      max-width: 60%;
+    }
+  }
+  
+  .input-range {
+    margin-bottom: 160px;
+    color: blue;
+    background-color: white;
+    margin-left: 20px;
+    
+  }
